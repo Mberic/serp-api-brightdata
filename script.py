@@ -5,10 +5,10 @@ host = 'brd.superproxy.io'
 port = 22225
 
 
-# please replace with your `username` and `password`
-# You can get these details from the Access Parameters tab of the proxy product. See below:
-#
-# https://brightdata.com/cp/zones/serp_api1/access_params
+# Please replace the `username` and `password` with your actual values
+# You can get these details from the Access Parameters tab of your SERP API proxy.
+# 
+# https://brightdata.com/cp/zones
 #
 
 username = 'brd-customer-hl_be7c1b49-zone-serp_api1'
@@ -24,17 +24,18 @@ proxies = {
 # In the link below, `pizza` is our search query. You can change it to something
 # else like `elections`
 #
-# We have added `Trends` query parameters by using the ampersand (&) on the link
-# Here is the API for query parameters
-# https://docs.brightdata.com/scraping-automation/serp-api/query-parameters/google
+# We have added the `Trends` query parameters by using the ampersand (&) on the link
+#
+# Here is the API for the query parameters
+#
+# https://docs.brightdata.com/scraping-automation/serp-api/query-parameters/google#trends
 #
 
-url = "https://www.google.com/search?q=pizza&geo=us&timenow+7-d&brd_json=1"
+url = "https://trends.google.com/trends/explore?q=pizza&cat=71&hl=en&date=now+1-H&brd_json=1"
 
 # Please fill in the absolute path to the `ca.crt` file you downloaded
-# Don't use "~" to refer to home
+# Don't use "~" to refer to the home directory
 # e.g  /home/josh/Documents/google-trends/ca.crt is correct
-
 
 cert_path = "/home/eric/Documents/code/python/google-trends/ca.crt"
 
